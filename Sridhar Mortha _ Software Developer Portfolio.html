@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sridhar Mortha | Software Developer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05030d;--cy:#00f0ff;--mg:#ff2bd6;--vi:#8a5cff;--tx:#d9d4ff;--mu:#8e86b8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:500 18px/1.6 Rajdhani,system-ui,sans-serif;overflow-x:hidden}
+#net{position:fixed;inset:0;z-index:0}
+#glow{position:fixed;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;pointer-events:none;z-index:1;
+background:radial-gradient(circle,rgba(138,92,255,.22),rgba(0,240,255,.07) 45%,transparent 70%);mix-blend-mode:screen}
+.crt{position:fixed;inset:0;pointer-events:none;z-index:50;
+background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px);
+box-shadow:inset 0 0 160px rgba(0,0,0,.65)}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;
+padding:14px 5vw;background:rgba(5,3,13,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,240,255,.25);box-shadow:0 0 22px rgba(0,240,255,.15)}
+nav b{font:800 18px Orbitron;color:var(--cy);text-shadow:0 0 8px var(--cy),0 0 20px var(--cy)}
+nav div{display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:var(--tx);text-decoration:none;font-size:16px;transition:.25s}
+nav a:hover,nav a:focus-visible{color:var(--mg);text-shadow:0 0 10px var(--mg);outline:none}
+main{position:relative;z-index:2}
+section{padding:110px 6vw 40px;max-width:1150px;margin:auto}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:120px}
+.hello{color:var(--cy);font-size:20px;text-shadow:0 0 10px var(--cy)}
+h1{font:800 clamp(40px,9vw,112px)/1 Orbitron;margin:.15em 0;letter-spacing:.02em;color:#fff2fd;
+text-shadow:0 0 4px #fff,0 0 12px var(--mg),0 0 28px var(--mg),0 0 60px var(--mg),0 0 110px #b0008f}
+h1 span{display:inline-block}
+.flick{animation:flick 6s infinite}
+.flick2{animation:flick 7.5s 1.2s infinite}
+@keyframes flick{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.35;text-shadow:none}}
+.role{font:500 clamp(18px,3vw,28px) Orbitron;color:var(--tx);min-height:1.6em}
+.role i{display:inline-block;width:.6em;height:1em;background:var(--cy);box-shadow:0 0 12px var(--cy);vertical-align:-.12em;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{max-width:60ch;color:var(--mu);margin:18px 0 30px}
+.btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{position:relative;padding:13px 28px;font:600 17px Rajdhani;color:var(--cy);text-decoration:none;border:2px solid var(--cy);border-radius:4px;
+box-shadow:0 0 12px var(--cy),inset 0 0 12px rgba(0,240,255,.35);text-shadow:0 0 8px var(--cy);transition:.3s;overflow:hidden}
+.btn:hover,.btn:focus-visible{background:var(--cy);color:#001418;text-shadow:none;box-shadow:0 0 30px var(--cy),0 0 70px var(--cy);outline:none}
+.btn.m{color:var(--mg);border-color:var(--mg);box-shadow:0 0 12px var(--mg),inset 0 0 12px rgba(255,43,214,.35);text-shadow:0 0 8px var(--mg)}
+.btn.m:hover,.btn.m:focus-visible{background:var(--mg);color:#1a0016;box-shadow:0 0 30px var(--mg),0 0 70px var(--mg)}
+h2{font:800 clamp(26px,4.5vw,42px) Orbitron;margin:0 0 34px;color:#e9fdff;text-shadow:0 0 6px var(--cy),0 0 18px var(--cy),0 0 44px var(--cy)}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:30px}
+.stat{display:grid;gap:14px}
+.card{--c:var(--cy);position:relative;padding:24px;border-radius:10px;background:rgba(14,9,32,.72);border:1px solid rgba(255,255,255,.07);
+transform-style:preserve-3d;transition:transform .15s,box-shadow .3s;backdrop-filter:blur(6px)}
+.card::before{content:"";position:absolute;inset:-1px;border-radius:11px;padding:1.5px;z-index:-1;
+background:radial-gradient(260px circle at var(--x,50%) var(--y,50%),var(--c),transparent 65%);
+-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.9}
+.card:hover{box-shadow:0 0 40px -6px var(--c)}
+.card h3{font:800 20px Orbitron;margin:0 0 8px;color:var(--c);text-shadow:0 0 12px var(--c)}
+.card.m{--c:var(--mg)}.card.v{--c:var(--vi)}
+.tag{display:inline-block;margin:4px 6px 0 0;padding:2px 12px;border:1px solid var(--c);border-radius:20px;font-size:15px;color:var(--c);box-shadow:0 0 8px -2px var(--c)}
+.card ul{margin:10px 0;padding-left:20px;color:var(--tx)}
+.card li::marker{color:var(--c)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;perspective:900px}
+.skills{display:flex;flex-wrap:wrap;gap:14px}
+.orb{padding:11px 22px;border-radius:6px;border:1.5px solid var(--c);color:#fff;background:rgba(0,0,0,.4);
+box-shadow:0 0 14px -2px var(--c),inset 0 0 14px -6px var(--c);text-shadow:0 0 8px var(--c);transition:.25s;animation:fl 5s ease-in-out infinite}
+.orb:nth-child(odd){animation-delay:-2s}.orb:nth-child(3n){animation-delay:-3.4s}
+.orb:hover{transform:scale(1.12);box-shadow:0 0 32px var(--c),inset 0 0 20px -2px var(--c)}
+@keyframes fl{50%{transform:translateY(-6px)}}
+.group{margin-bottom:26px}.group>p{margin:0 0 12px;color:var(--mu)}
+.cert{display:flex;gap:14px;align-items:center}
+.cert svg{flex:none;width:34px;height:34px;filter:drop-shadow(0 0 6px var(--c))}
+.contact{text-align:center;padding-bottom:90px}
+.contact a.big{display:inline-block;margin:6px 0 24px;font:800 clamp(18px,3.4vw,32px) Orbitron;color:var(--mg);text-decoration:none;word-break:break-all;
+text-shadow:0 0 6px var(--mg),0 0 20px var(--mg),0 0 50px var(--mg);animation:flick 8s infinite}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+footer{position:relative;z-index:2;text-align:center;padding:24px;color:var(--mu);font-size:15px;border-top:1px solid rgba(138,92,255,.3)}
+@media(max-width:760px){.about{grid-template-columns:1fr}nav div{gap:12px}nav a{font-size:14px}nav b{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="net" aria-hidden="true"></canvas><div id="glow"></div><div class="crt"></div>
+<nav><b>SM</b><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero">
+  <div class="hello">Hi, I'm</div>
+  <h1><span class="flick">Sridhar</span> <span class="flick2">Mortha</span></h1>
+  <div class="role"><span id="typed"></span><i></i></div>
+  <p class="lead">Computer Science student who builds full-stack web apps and machine-learning models. I'm looking for an SDE I internship where I can write code that scales.</p>
+  <div class="btns"><a class="btn" href="#projects">View projects</a><a class="btn m" href="#contact">Contact me</a></div>
+</section>
+
+<section id="about" class="rv">
+  <h2>About me</h2>
+  <div class="about">
+    <div class="card"><h3>B.Tech, Computer Science and Engineering</h3>
+      <p>I study at Ideal Institution of Technology in Kakinada. My strengths are software development, databases and problem solving, and I like turning CS fundamentals into working products.</p>
+      <p>I've built web apps with React.js and MongoDB, and a machine-learning model that predicts wind-turbine output from weather data.</p></div>
+    <div class="stat">
+      <div class="card m"><h3>3 projects</h3>Web apps and machine learning</div>
+      <div class="card v"><h3>6 certifications</h3>Full stack, AWS, DevOps and AI</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="rv">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card"><h3>ResolveX</h3><p><b>AI-powered secure complaint and case resolution system</b></p>
+      <ul><li>Citizens report complaints across multiple categories</li><li>Complaint tracking, status updates and team assignment</li><li>Built around authentication, privacy and fast resolution</li></ul></div>
+    <div class="card m"><h3>ShopEZ</h3><p><b>Full-stack e-commerce application</b></p>
+      <ul><li>Authentication and product management</li><li>Shopping cart and responsive interface</li><li>Frontend and backend connected through REST APIs</li></ul></div>
+    <div class="card v"><h3>Wind Turbine Energy Prediction</h3><p><b>Weather-based power forecasting</b></p>
+      <ul><li>Machine-learning model predicts turbine power output</li><li>Data preprocessing, training and prediction</li><li>Serves predictions to a web-based application</li></ul></div>
+  </div>
+</section>
+
+<section id="skills" class="rv">
+  <h2>Skills</h2>
+  <div class="group"><p>Programming</p><div class="skills"><span class="orb" style="--c:var(--cy)">Python</span><span class="orb" style="--c:var(--cy)">JavaScript</span><span class="orb" style="--c:var(--cy)">SQL</span></div></div>
+  <div class="group"><p>Web</p><div class="skills"><span class="orb" style="--c:var(--mg)">HTML5</span><span class="orb" style="--c:var(--mg)">CSS3</span><span class="orb" style="--c:var(--mg)">React.js</span></div></div>
+  <div class="group"><p>Databases</p><div class="skills"><span class="orb" style="--c:var(--vi)">MongoDB</span><span class="orb" style="--c:var(--vi)">MySQL</span></div></div>
+  <div class="group"><p>Tools</p><div class="skills"><span class="orb" style="--c:#39ff88">Git</span><span class="orb" style="--c:#39ff88">GitHub</span><span class="orb" style="--c:#39ff88">VS Code</span><span class="orb" style="--c:#39ff88">Postman</span></div></div>
+</section>
+
+<section id="certs" class="rv">
+  <h2>Certifications</h2>
+  <div class="grid">
+    <div class="card cert"><svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><div>Python Full Stack Developer<br><small>Virtual Internship</small></div></div>
+    <div class="card m cert"><svg viewBox="0 0 24 24" fill="none" stroke="#ff2bd6" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><div>AWS Academy<br><small>Generative AI</small></div></div>
+    <div class="card v cert"><svg viewBox="0 0 24 24" fill="none" stroke="#8a5cff" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><div>AWS Certified<br><small>Cloud Practitioner</small></div></div>
+    <div class="card cert"><svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><div>DevOps &amp; Cloud Automation<br><small>Certification</small></div></div>
+    <div class="card m cert"><svg viewBox="0 0 24 24" fill="none" stroke="#ff2bd6" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><div>MERN Full Stack Development + Project<br><small>Certification</small></div></div>
+    <div class="card v cert"><svg viewBox="0 0 24 24" fill="none" stroke="#8a5cff" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><div>Prompt Engineering for AI<br><small>Certification</small></div></div>
+  </div>
+</section>
+
+<section id="contact" class="contact rv">
+  <h2>Let's work together</h2>
+  <a class="big" href="mailto:19072cm010@gmail.com">19072cm010@gmail.com</a>
+  <div class="btns" style="justify-content:center"><a class="btn" href="tel:+919515587737">Call 9515587737</a><a class="btn m" href="mailto:19072cm010@gmail.com">Send email</a></div>
+  <p style="color:var(--mu);margin-top:22px">Based in Kakinada, Andhra Pradesh</p>
+</section>
+</main>
+<footer>Sridhar Mortha</footer>
+
+<script>
+(function(){
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+// typing roles
+var roles=["Full-stack developer","React and MongoDB builder","Machine-learning explorer","AWS certified"],ri=0,ci=0,del=false,el=document.getElementById("typed");
+function type(){var w=roles[ri];el.textContent=w.slice(0,ci);
+ if(rm){el.textContent=roles[0];return}
+ if(!del&&ci++==w.length){del=true;return setTimeout(type,1400)}
+ if(del&&--ci<0){del=false;ci=0;ri=(ri+1)%roles.length}
+ setTimeout(type,del?35:75)}
+type();
+// cursor glow + card spotlight
+var g=document.getElementById("glow"),mx=innerWidth/2,my=innerHeight/2;
+addEventListener("pointermove",function(e){mx=e.clientX;my=e.clientY;g.style.transform="translate("+mx+"px,"+my+"px)"});
+g.style.transform="translate("+mx+"px,"+my+"px)";
+document.querySelectorAll(".card").forEach(function(c){
+ c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+  c.style.setProperty("--x",x+"px");c.style.setProperty("--y",y+"px");
+  if(!rm&&c.parentNode.classList.contains("grid"))c.style.transform="rotateY("+((x/r.width-.5)*12)+"deg) rotateX("+((.5-y/r.height)*12)+"deg) translateZ(8px)"});
+ c.addEventListener("pointerleave",function(){c.style.transform=""})});
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(s){io.observe(s)});
+// particle network
+var cv=document.getElementById("net"),cx=cv.getContext("2d"),P=[],W,H,cols=["0,240,255","255,43,214","138,92,255"];
+function size(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=[];var n=Math.min(90,Math.floor(W*H/16000));
+ for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,c:cols[i%3]})}
+size();addEventListener("resize",size);
+function draw(){cx.clearRect(0,0,W,H);
+ for(var i=0;i<P.length;i++){var a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
+  var dx=a.x-mx,dy=a.y-my,d=Math.sqrt(dx*dx+dy*dy);if(d<140){a.x+=dx/d*1.2;a.y+=dy/d*1.2}
+  cx.beginPath();cx.arc(a.x,a.y,1.8,0,6.3);cx.fillStyle="rgba("+a.c+",.95)";cx.shadowColor="rgb("+a.c+")";cx.shadowBlur=12;cx.fill();cx.shadowBlur=0;
+  for(var j=i+1;j<P.length;j++){var b=P[j],ex=a.x-b.x,ey=a.y-b.y,l=ex*ex+ey*ey;
+   if(l<17000){cx.strokeStyle="rgba("+a.c+","+(.28*(1-l/17000))+")";cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}}
+ requestAnimationFrame(draw)}
+if(!rm)draw();else{draw=null}
+})();
+</script>
+</body>
+</html>
